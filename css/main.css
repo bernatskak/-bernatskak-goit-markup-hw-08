@@ -11,6 +11,8 @@ body {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 input {
@@ -56,7 +58,22 @@ input {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  width: 1200px;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .current {
@@ -236,7 +253,20 @@ input {
 }
 
 .feature {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .feature {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .feature .title {
   margin-top: 30px;
@@ -245,6 +275,22 @@ input {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+@media screen and (min-width: 480px) {
+  .feature .feature__list-astronaut,
+.feature .feature__list-diagram,
+.feature .feature__list-clock,
+.feature .feature__list-antenna {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature .feature__list-astronaut,
+.feature .feature__list-diagram,
+.feature .feature__list-clock,
+.feature .feature__list-antenna {
+    width: calc((100% - 90px) / 4);
+  }
 }
 .feature .text {
   margin-top: 10px;
@@ -266,8 +312,8 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 270px;
-  height: 120px;
+  width: 100%;
+  height: auto;
   background-color: #f5f4fa;
 }
 

@@ -1,7 +1,16 @@
 .feature__list {
   width: 270px;
 }
+
 .feature {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   .title {
     margin-top: 30px;
@@ -10,6 +19,17 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+  }
+  .feature__list-astronaut,
+  .feature__list-diagram,
+  .feature__list-clock,
+  .feature__list-antenna {
+    @media screen and (min-width: 480px) {
+      width: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 90px) / 4);
+    }
   }
   .text {
     margin-top: 10px;
@@ -27,7 +47,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
-  height: 120px;
+
+  width: 100%;
+  height: auto;
   background-color: $BadgeBgColor;
 }
