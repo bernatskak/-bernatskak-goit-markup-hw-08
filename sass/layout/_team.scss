@@ -1,0 +1,58 @@
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  background-color: $BadgeBgColor;
+}
+.title {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.team__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.title--color-dark {
+  color: $MainColor;
+}
+.team__list {
+  display: flex;
+  column-gap: 30px;
+}
+.team__item {
+  background-color: $mainLightColor;
+  width: calc((100% - 60px) / 3);
+  box-shadow: $boxShadow;
+  border-radius: 0px 0px 4px 4px;
+}
+.team__name-img {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.name {
+  margin-top: 0px;
+  margin-bottom: 10px;
+
+  color: $mainLightColor;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.team__position {
+  margin: 0px;
+  color: $SecondaryColor;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+}

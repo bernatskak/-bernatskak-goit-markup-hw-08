@@ -1,0 +1,21 @@
+.button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 32px;
+  border-radius: 4px;
+  min-width: 200px;
+  text-align: center;
+  border: none;
+
+  background-color: $CurrentColor;
+  color: $mainLightColor;
+
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color $TransitionTimingFunction;
+  &:hover,
+  &:focus {
+    background-color: $SecondaryCurrentColor;
+  }
+}

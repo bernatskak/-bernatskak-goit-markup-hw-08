@@ -1,0 +1,79 @@
+.flex-filter {
+  margin-bottom: 50px;
+}
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0px;
+  padding: 0px;
+}
+.project-list {
+  width: 370px;
+  display: flex;
+
+  color: $MainColor;
+
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.project-top-list {
+  position: relative;
+  overflow: hidden;
+}
+.top-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+
+  color: $mainLightColor;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+  .project-list:hover & {
+    transform: translateY(0);
+  }
+}
+.project-img {
+  text-decoration: none;
+  transition: box-shadow $TransitionTimingFunction;
+  &:hover,
+  &:focus {
+    box-shadow: $boxShadow;
+  }
+}
+
+.project-list-title {
+  border-right: 1px solid $BorderLidhtColor;
+  border-bottom: 1px solid $BorderLidhtColor;
+  border-left: 1px solid $BorderLidhtColor;
+  padding: 20px 24px;
+}
+.project-title {
+  margin: 0px;
+  margin-bottom: 4px;
+  color: $MainColor;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.project-text {
+  margin: 0px;
+  color: $SecondaryColor;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+}

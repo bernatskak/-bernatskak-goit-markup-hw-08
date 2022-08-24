@@ -1,0 +1,31 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $BorderColor;
+}
+
+.site-logo-footer {
+  color: $mainDarkColor;
+
+  font-family: 'Raleway', $FontFamily;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-align: left;
+  text-decoration: none;
+}
+.secondary-current {
+  color: $mainLightColor;
+
+  font-family: $FontFamily;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.container-footer {
+  display: flex;
+  align-items: baseline;
+}
