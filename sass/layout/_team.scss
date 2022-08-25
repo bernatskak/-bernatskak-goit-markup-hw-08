@@ -1,12 +1,23 @@
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
-
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: $BadgeBgColor;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .title {
   margin-top: 0px;
   margin-bottom: 0px;
+}
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 .team__title {
   margin-top: 0;
@@ -20,15 +31,18 @@
 .title--color-dark {
   color: $MainColor;
 }
-.team__list {
-  display: flex;
-  column-gap: 30px;
-}
+
 .team__item {
   background-color: $mainLightColor;
-  width: calc((100% - 60px) / 3);
+  // width: calc((100% - 60px) / 3);
   box-shadow: $boxShadow;
   border-radius: 0px 0px 4px 4px;
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
 }
 .team__name-img {
   padding-top: 30px;
