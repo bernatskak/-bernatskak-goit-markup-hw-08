@@ -1,24 +1,24 @@
 .filter {
-  justify-content: center;
-  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  row-gap: 15px;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
-.filter-item {
-  display: block;
-  margin-right: 8px;
+// .filter-item {
+//   margin-right: 8px;
 
-  color: $MainColor;
+//   color: $MainColor;
 
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 1.62;
 
-  &:last-child {
-    margin-right: 0px;
-    @include mobile {
-      width: calc((100% - 8px) / 3);
-    }
-  }
-}
+//   &:last-child {
+//     margin-right: 0px;
+//   }
+// }
 
 .button-filter-all {
   padding: 6px 22px;

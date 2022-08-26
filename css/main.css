@@ -99,9 +99,6 @@ input {
 }
 
 .list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -212,8 +209,8 @@ input {
 .customers-title {
   margin-top: 0px;
   margin-bottom: 50px;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
@@ -232,6 +229,7 @@ input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 60px;
 }
 
 .customers-item {
@@ -351,27 +349,17 @@ input {
 }
 
 .filter {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
-}
-
-.filter-item {
-  display: block;
-  margin-right: 8px;
-  color: #212121;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-}
-.filter-item:last-child {
-  margin-right: 0px;
-}
-@media screen and (min-width: 480px) {
-  .filter-item:last-child {
-    width: calc((100% - 8px) / 3);
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+  row-gap: 15px;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
 .button-filter-all {
@@ -885,21 +873,19 @@ input {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0px;
   padding: 0px;
 }
-@media screen and (min-width: 480px) {
-  .project {
-    margin-top: 40px;
-    margin-bottom: 60px;
-  }
-}
 
 .project-list {
-  width: 370px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  max-width: 450px;
+  margin-bottom: 60px;
   color: #212121;
   font-size: 18px;
   line-height: 2;
@@ -908,11 +894,6 @@ input {
 @media screen and (min-width: 768px) {
   .project-list {
     width: calc((100% - 30px) / 2);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .project-list {
-    width: calc((100% - 60px) / 3);
   }
 }
 
@@ -1081,16 +1062,23 @@ input {
   padding-bottom: 60px;
   background-color: #f5f4fa;
 }
-@media screen and (min-width: 1200px) {
-  .team {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
-}
 
 .title {
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.team__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.title--color-dark {
+  color: #212121;
 }
 
 .team__list {
@@ -1106,19 +1094,6 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.team__title {
-  margin-top: 0;
-  margin-bottom: 50px;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
-.title--color-dark {
-  color: #212121;
 }
 
 .team__item {
@@ -1138,6 +1113,10 @@ input {
   }
 }
 
+.team__item img {
+  width: auto;
+}
+
 .team__name-img {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -1146,7 +1125,7 @@ input {
 .name {
   margin-top: 0px;
   margin-bottom: 10px;
-  color: white;
+  color: #212121;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
