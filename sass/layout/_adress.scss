@@ -4,13 +4,27 @@
   font-style: normal;
 }
 .adress-list {
-  display: block;
-  flex-direction: column;
+  @include mobile-max {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include desktop {
+    display: block;
+    flex-direction: column;
+  }
 }
 .adress-item {
-  margin-bottom: 9px;
-  &:last-child {
-    margin-bottom: 0px;
+  @include desktop {
+    margin-bottom: 9px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
   }
 }
 
@@ -31,4 +45,51 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration: none;
+}
+.container-social {
+  @include mobile-max {
+    margin-bottom: 60px;
+  }
+  @include tablet {
+    width: 50%;
+  }
+  @include desktop {
+    width: 206px;
+    margin-left: 70px;
+  }
+}
+
+.social-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 206px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $mainLightColor;
+}
+.social-list {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.soc-item {
+  width: 44px;
+  height: 44px;
+}
+.soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background-color $TransitionTimingFunction;
+  &:hover,
+  &:focus {
+    background-color: $CurrentColor;
+  }
 }

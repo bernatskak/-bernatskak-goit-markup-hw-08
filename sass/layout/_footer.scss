@@ -3,29 +3,60 @@
   padding-bottom: 60px;
   background-color: $BorderColor;
 }
-
+.container-footer {
+  display: flex;
+  @include mobile-max {
+    flex-direction: column;
+    align-items: center;
+  }
+  @include tablet {
+    flex-wrap: wrap;
+    text-align: center;
+    // align-items: baseline;
+  }
+  @include desktop {
+    align-items: baseline;
+  }
+}
+.container-contacts {
+  @include mobile-max {
+    margin: 0 auto 60px;
+  }
+}
+.container-contacts,
+.container-social {
+  @include tablet {
+    flex-basis: 50%;
+    margin-bottom: 60px;
+  }
+}
 .site-logo-footer {
   color: $mainDarkColor;
-
-  font-family: 'Raleway', $FontFamily;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  text-align: left;
-  text-decoration: none;
+  @include mobile-max {
+    font-family: $LogoFamily;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+  @include desktop {
+    font-family: $LogoFamily;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-align: left;
+    text-decoration: none;
+  }
 }
+
 .secondary-current {
   color: $mainLightColor;
 
-  font-family: $FontFamily;
+  font-family: $LogoFamily;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-}
-
-.container-footer {
-  display: flex;
-  align-items: baseline;
 }

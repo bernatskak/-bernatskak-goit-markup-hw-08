@@ -1,10 +1,18 @@
 .section__title-main {
-  max-width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  @include mobile-max {
+    width: 100%;
+    padding: 118px 0px;
+  }
+  @include tablet {
+    padding: 118px 0;
+  }
+  @include desktop {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 200px 0;
+  }
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero.jpg);
   background-repeat: no-repeat;
@@ -18,11 +26,16 @@
   margin-bottom: 0px;
   padding-left: 15px;
   padding-right: 15px;
-  width: 1200px;
+  max-width: 100%;
+  @include tablet {
+    width: 768px;
+  }
+  @include desktop {
+    width: 1200px;
+  }
 }
 
 .main__title {
-  max-width: 696px;
   margin-top: 0;
   margin-bottom: 30px;
   margin-left: auto;
@@ -30,8 +43,21 @@
 
   font-family: 'Roboto', $FontFamily;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 22px;
+  line-height: 1.61;
+  @include mobile {
+    font-size: 26px;
+    line-height: 1.61;
+    max-width: 360px;
+  }
+  @include tablet {
+    max-width: 360px;
+  }
+  @include desktop {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;

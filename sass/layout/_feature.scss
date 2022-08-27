@@ -5,7 +5,7 @@
 .feature {
   padding-top: 60px;
   padding-bottom: 60px;
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -20,18 +20,18 @@
     text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    @media screen and (min-width: 480px) {
-      text-align: start;
+    @include mobile-max {
+      text-align: center;
     }
   }
   .feature__list-astronaut,
   .feature__list-diagram,
   .feature__list-clock,
   .feature__list-antenna {
-    @media screen and (min-width: 480px) {
+    @include tablet {
       width: calc((100% - 30px) / 2);
     }
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       width: calc((100% - 90px) / 4);
     }
   }
