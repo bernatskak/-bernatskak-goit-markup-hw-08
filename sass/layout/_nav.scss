@@ -1,11 +1,20 @@
+.menu-container {
+  @include tablet {
+    display: flex;
+  }
+}
 .navigation,
 .navigation__list {
   display: flex;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   .link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
   }
+
   .current-item {
     color: $CurrentColor;
     font-size: 14px;
@@ -32,7 +41,7 @@
   }
 }
 
-.navigation > .logo__header {
+.main-nav > .logo__header {
   margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 25px;

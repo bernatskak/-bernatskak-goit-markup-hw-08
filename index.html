@@ -26,46 +26,76 @@
   </head>
   <!--Hero-->
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container main-nav">
-        <nav class="navigation">
-          <a class="logo__header title--color-dark" href="index.html" lang="en"
-            ><span class="current">Web</span>Studio</a
-          >
-          <ul class="navigation__list list">
-            <li class="navigation__item-menu">
-              <a href="./index.html" class="link navigation__link active"
-                ><span class="current-item">Студія</span></a
-              >
-            </li>
-            <li class="navigation__item-menu">
-              <a href="./portfolio.html" class="link navigation__link">Портфоліо</a>
-            </li>
-            <li class="navigation__item-menu">
-              <a href="#" class="link navigation__link">Контакти</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="contact list">
-          <li class="contact__list">
-            <a class="contact__mail-link link" href="mailto:info@devstudio.com">
-              <svg class="contact__icon" width="16" height="12">
-                <use href="./images/symbol-defs icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contact__list">
-            <a class="contact__tel-link link" href="tel:+380961111111">
-              <svg class="contact__icon" width="10" height="16">
-                <use href="./images/symbol-defs icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <a class="logo__header title--color-dark" href="index.html" lang="en"
+          ><span class="current">Web</span>Studio</a
+        >
+        <button
+          type="button"
+          class="menu-btn"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+            <use class="icon-close" href="./images/symbol-defs icons.svg#icon-close_btn"></use>
+            <use class="icon-menu" href="./images/symbol-defs icons.svg#icon-menu_btn"></use>
+          </svg>
+        </button>
+        <div class="menu" id="menu-container" data-menu>
+          <div class="menu-container">
+            <nav class="navigation">
+              <ul class="navigation__list list">
+                <li class="navigation__item-menu">
+                  <a href="./index.html" class="link navigation__link active"
+                    ><span class="current-item">Студія</span></a
+                  >
+                </li>
+                <li class="navigation__item-menu">
+                  <a href="./portfolio.html" class="link navigation__link">Портфоліо</a>
+                </li>
+                <li class="navigation__item-menu">
+                  <a href="#" class="link navigation__link">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="contact list">
+              <li class="contact__list">
+                <a class="contact__mail-link link" href="mailto:info@devstudio.com">
+                  <svg class="contact__icon" width="16" height="12">
+                    <use href="./images/symbol-defs icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="contact__list">
+                <a class="contact__tel-link link" href="tel:+380961111111">
+                  <svg class="contact__icon" width="10" height="16">
+                    <use href="./images/symbol-defs icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-soc list">
+              <li class="mobile-soc__item">
+                <a href="" class="mobile-soc__link link">Instagram</a>
+              </li>
+              <li class="mobile-soc__item">
+                <a href="" class="mobile-soc__link link">Twitter</a>
+              </li>
+              <li class="mobile-soc__item">
+                <a href="" class="mobile-soc__link link">Facebook</a>
+              </li>
+              <li class="mobile-soc__item">
+                <a href="" class="mobile-soc__link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </header> -->
+    </header>
     <main>
       <section class="section__title-main">
         <div class="container__title-main">
@@ -122,7 +152,7 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="work">
+      <section class="work">
         <div class="container">
           <h2 class="about-work title--color-dark">Чим ми займаємося</h2>
           <ul class="work__list list">
@@ -146,7 +176,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Our team-->
       <section class="team">
         <div class="container">
@@ -509,6 +539,7 @@
         </form>
       </div>
     </div>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!--<script>

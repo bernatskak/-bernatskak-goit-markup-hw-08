@@ -2,6 +2,7 @@
   border-bottom: 1px solid $BorderHeader;
   background-color: $mainLightColor;
   .main-nav {
+    position: relative;
     display: flex;
     align-items: center;
   }

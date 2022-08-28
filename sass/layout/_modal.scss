@@ -5,6 +5,8 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   transition: opacity $TransitionTimingFunction, visibility $TransitionTimingFunction;
+  padding: 94px, 15px;
+  overflow-y: scroll;
 }
 
 .is-hidden {
@@ -14,14 +16,19 @@
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  @include desktop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
-  width: 528px;
-  min-height: 581px;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform $TransitionTimingFunction;
+    width: 528px;
+    min-height: 581px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $TransitionTimingFunction;
+  }
+  max-width: 528px;
+  width: 100%;
+  min-height: 609px;
   background: $mainLightColor;
   box-shadow: $boxShadow;
   border-radius: 4px;
