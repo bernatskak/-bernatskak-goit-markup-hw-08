@@ -192,7 +192,7 @@ input {
     margin-bottom: 60px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
   .container-social {
     width: 50%;
   }
@@ -214,6 +214,11 @@ input {
   text-transform: uppercase;
   text-align: center;
   color: white;
+}
+@media screen and (min-width: 1200px) {
+  .social-text {
+    text-align: start;
+  }
 }
 
 .social-list {
@@ -519,13 +524,11 @@ input {
   background-color: #2f303a;
 }
 
-.container-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
 @media screen and (max-width: 767px) {
   .container-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -535,18 +538,25 @@ input {
             align-items: center;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
   .container-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     text-align: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 @media screen and (min-width: 1200px) {
   .container-footer {
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    aign-items: baseline;
   }
 }
 
@@ -927,7 +937,7 @@ input {
     width: 100%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
   .container-online {
     margin: 0 auto;
   }
@@ -952,7 +962,9 @@ input {
 }
 @media screen and (min-width: 1200px) {
   .online-title {
-    text-align: start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -969,7 +981,7 @@ input {
             flex-direction: column;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
   .online-form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1008,7 +1020,7 @@ input {
 }
 @media screen and (min-width: 1200px) {
   .online-input {
-    width: 358px;
+    width: 570px;
     height: 50px;
     padding-left: 16px;
     padding-top: 15px;
@@ -1070,6 +1082,12 @@ input {
 }
 .online-button:hover, .online-button:focus {
   background-color: #188ce8;
+}
+@media screen and (min-width: 1200px) {
+  .online-button {
+    min-width: 200px;
+    height: 50px;
+  }
 }
 
 .online-icon {

@@ -4,18 +4,20 @@
   background-color: $BorderColor;
 }
 .container-footer {
-  display: flex;
   @include mobile-max {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
-  @include tablet {
+  @media screen and (max-width: 1199px) {
+    display: flex;
     flex-wrap: wrap;
     text-align: center;
-    // align-items: baseline;
+    align-items: baseline;
   }
   @include desktop {
-    align-items: baseline;
+    display: flex;
+    aign-items: baseline;
   }
 }
 .container-contacts {

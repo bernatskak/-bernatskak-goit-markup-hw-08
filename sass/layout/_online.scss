@@ -2,7 +2,7 @@
   @include mobile-max {
     width: 100%;
   }
-  @include tablet {
+  @media screen and (max-width: 1199px) {
     margin: 0 auto;
   }
   @include desktop {
@@ -23,7 +23,7 @@
   margin-bottom: 20px;
 
   @include desktop {
-    text-align: start;
+    justify-content: flex-start;
   }
 }
 .online-form {
@@ -31,7 +31,7 @@
   @include mobile-max {
     flex-direction: column;
   }
-  @include tablet {
+  @media screen and (max-width: 1199px) {
     flex-direction: column;
   }
   @include desktop {
@@ -50,7 +50,7 @@
     margin-bottom: 20px;
   }
   @include desktop {
-    width: 358px;
+    width: 570px;
     height: 50px;
     padding-left: 16px;
     padding-top: 15px;
@@ -98,6 +98,10 @@
   &:hover,
   &:focus {
     background-color: $SecondaryCurrentColor;
+  }
+  @include desktop {
+    min-width: 200px;
+    height: 50px;
   }
 }
 
