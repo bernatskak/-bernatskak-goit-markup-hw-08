@@ -2,11 +2,18 @@
   margin-left: auto;
 }
 .contact__list {
-  @include mobile-max {
-    display: none;
-  }
   display: flex;
-  margin-right: 50px;
+  flex-wrap: wrap;
+  // @include mobile-max {
+  //   // display: none;
+  // }
+  @include tablet {
+    margin-left: auto;
+  }
+  @include desktop {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
   color: $SecondaryColor;
   align-items: center;
   font-weight: 500;
@@ -16,9 +23,6 @@
   transition: color $TransitionTimingFunction;
   .contact &:last-child {
     margin-right: 0px;
-  }
-  @include tablet {
-    flex-direction: column;
   }
 }
 
@@ -41,8 +45,11 @@
 }
 
 .contact__icon {
-  fill: currentColor;
-  margin-right: 10px;
+  @include tablet {
+    display: inline-block;
+    fill: currentColor;
+    margin-right: 10px;
+  }
   background-position: center;
   background-size: contain;
   &:hover,
@@ -50,3 +57,4 @@
     color: $CurrentColor;
   }
 }
+//

@@ -1,13 +1,16 @@
 .menu-container {
   @include tablet {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
   }
 }
-.navigation,
 .navigation__list {
   display: flex;
-  @media screen and (max-width: 767px) {
-    display: none;
+  @include tablet {
+    margin-left: 87px;
+    margin-right: 96px;
+    margin-top: 32px;
   }
   .link {
     display: block;
@@ -35,13 +38,19 @@
 }
 
 .navigation__item-menu {
-  margin-right: 50px;
-  &:last-child {
-    margin-right: 0px;
+  @include tablet {
+    margin-right: 50px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
   }
 }
 
 .main-nav > .logo__header {
+  @include tablet {
+    margin: 26px 87px 0px 15px;
+  }
   margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 25px;
