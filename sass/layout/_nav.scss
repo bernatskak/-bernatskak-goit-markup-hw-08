@@ -48,6 +48,10 @@
 }
 
 .main-nav > .logo__header {
+  @include mobile {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
   @include tablet {
     margin: 26px 87px 0px 15px;
   }
