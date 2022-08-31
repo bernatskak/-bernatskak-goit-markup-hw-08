@@ -1,12 +1,14 @@
 .contact {
-  margin-left: auto;
+  margin-bottom: 64px;
+  @include desktop {
+    margin-left: auto;
+  }
 }
 .contact__list {
-  display: flex;
-  flex-wrap: wrap;
-  // @include mobile-max {
-  //   // display: none;
-  // }
+  @include mobile-max {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   @include tablet {
     margin-left: auto;
   }
@@ -25,14 +27,34 @@
     margin-right: 0px;
   }
 }
-
+.contact__tel-link {
+  @include mobile-max {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    margin-top: auto;
+    color: $CurrentColor;
+  }
+}
 .contact__mail-link,
 .contact__tel-link {
-  display: flex;
-  align-items: center;
-  padding: 22px 6px;
+  @include mobile-max {
+    display: flex;
+    flex-direction: column-reverse;
+    // justify-content: space-between;
+  }
+  @include tablet {
+    display: inline-block;
+    fill: currentColor;
+    margin-right: 10px;
+  }
+  @include desktop {
+    display: flex;
+    align-items: center;
+    padding: 22px 6px;
+  }
   color: $SecondaryColor;
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -45,6 +67,10 @@
 }
 
 .contact__icon {
+  @include mobile-max {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   @include tablet {
     display: inline-block;
     fill: currentColor;

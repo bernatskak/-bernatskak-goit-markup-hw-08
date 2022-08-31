@@ -1,49 +1,76 @@
-.menu-container {
-  @include tablet {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-}
 .navigation__list {
-  display: flex;
+  @include mobile-max {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 302px;
+  }
   @include tablet {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
     margin-left: 87px;
     margin-right: 96px;
-    margin-top: 32px;
   }
-  .link {
+}
+.link {
+  @include desktop {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
   }
-
-  .current-item {
-    color: $CurrentColor;
-    font-size: 14px;
-    line-height: 1.14;
-  }
-  .navigation__link {
-    color: $MainColor;
+}
+.current-item {
+  @include mobile-max {
+    padding: 0;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 40px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
-    transition: color $TransitionTimingFunction;
-    &:hover,
-    &:focus {
-      color: $CurrentColor;
-    }
+    color: $CurrentColor;
+  }
+  font-size: 14px;
+  line-height: 1.14;
+}
+.navigation__link {
+  @include mobile-max {
+    padding: 0;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $MainColor;
+  }
+  @include tablet {
+    padding: 32px 0;
+  }
+  color: $MainColor;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition: color $TransitionTimingFunction;
+  &:hover,
+  &:focus {
+    color: $CurrentColor;
   }
 }
 
 .navigation__item-menu {
+  margin-left: 40px;
+  @include mobile-max {
+    &:last-child {
+      margin-bottom: auto;
+    }
+  }
   @include tablet {
     margin-right: 50px;
-
-    &:last-child {
-      margin-right: 0px;
-    }
+  }
+  &:last-child {
+    margin-right: 0px;
   }
 }
 
@@ -55,9 +82,11 @@
   @include tablet {
     margin: 26px 87px 0px 15px;
   }
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  @include desktop {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
   font-family: $LogoFamily;
   font-weight: 700;
   font-size: 26px;

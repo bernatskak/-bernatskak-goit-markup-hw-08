@@ -1,27 +1,43 @@
 .header {
+  position: relative;
+  width: 100%;
   border-bottom: 1px solid $BorderHeader;
   background-color: $mainLightColor;
   .main-nav {
+    width: 100%;
     display: flex;
     align-items: center;
   }
 }
 .menu-btn {
-  display: inline-flex;
+  display: block;
   padding: 10px 15px 10px auto;
+  margin-left: auto;
   border: none;
   background-color: transparent;
+  color: $MainColor;
+  cursor: pointer;
+  transition: color $TransitionTimingFunction;
+
   @include tablet {
     display: none;
   }
 }
-.icone-close,
+.menu-btn:hover,
+.menu-btn:focus {
+  color: $CurrentColor;
+}
+.contact__icon .icone-close,
 .icon-menu {
   padding: 10px;
 }
-.menu-btn .icon-close {
+
+.icon-close {
   display: none;
+  margin-left: auto;
+  margin-bottom: 30px;
 }
+
 .menu-btn.is-open .icon-close {
   display: block;
 }
