@@ -14,6 +14,7 @@
   }
   @include desktop {
     margin-left: auto;
+    align-items: center;
   }
 }
 .contact__list {
@@ -27,7 +28,6 @@
   .contact &:last-child {
     margin-right: 0px;
   }
-
   @include desktop {
     display: flex;
     flex-wrap: wrap;
