@@ -315,6 +315,9 @@ input {
 @media screen and (min-width: 1200px) {
   .contact {
     margin-left: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -576,7 +579,7 @@ input {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: auto;
+  height: 120px;
   background-color: #f5f4fa;
 }
 
@@ -928,6 +931,9 @@ input {
   position: relative;
   top: 0;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border-bottom: 1px solid #ececec;
   background-color: white;
 }
