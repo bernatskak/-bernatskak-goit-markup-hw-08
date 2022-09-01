@@ -5,9 +5,10 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   transition: opacity $TransitionTimingFunction, visibility $TransitionTimingFunction;
-  padding: 94px, 15px;
-
-  overflow-y: auto;
+  @media screen and (max-width: 480px) {
+    padding: 94px, 15px;
+    overflow-y: auto;
+  }
 }
 
 .is-hidden {
@@ -17,31 +18,42 @@
 }
 
 .modal {
-  @media screen and (max-wigth: 1199px) {
+  @media screen and (max-width: 330px) {
+    padding: 40px 10px;
+  }
+  @media screen and (min-width: 331px) and (max-width: 470px) {
+    padding: 40px 20px;
+    height: 609px;
+  }
+  @include mobile {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
+    width: 450px;
+    height: 609px;
     transform: translate(-50%, -50%);
-    padding: 35px 14px 19px 46px;
+    width: calc(100% - 30px);
+    @media screen and (max-width: 1199px) {
+      min-height: 609px;
+    }
+    padding: 40px;
+  }
+  @include tablet {
+    width: 450px;
   }
   @include desktop {
     position: absolute;
     top: 50%;
     left: 50%;
-
     width: 528px;
     min-height: 581px;
     transform: translate(-50%, -50%) scale(1);
     transition: transform $TransitionTimingFunction;
   }
-  max-width: 528px;
-  width: 100%;
-  min-height: 609px;
+
   background: $mainLightColor;
   box-shadow: $boxShadow;
   border-radius: 4px;
-  padding: 40px;
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0);
   }

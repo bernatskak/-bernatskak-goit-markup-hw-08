@@ -9,19 +9,19 @@
     justify-content: center;
   }
 }
-// .filter-item {
-//   margin-right: 8px;
+.filter-item {
+  margin-right: 8px;
 
-//   color: $MainColor;
+  color: $MainColor;
 
-//   font-weight: 500;
-//   font-size: 16px;
-//   line-height: 1.62;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
 
-//   &:last-child {
-//     margin-right: 0px;
-//   }
-// }
+  &:last-child {
+    margin-right: 0px;
+  }
+}
 
 .button-filter-all {
   padding: 6px 22px;

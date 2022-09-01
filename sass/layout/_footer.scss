@@ -8,21 +8,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 60px;
   }
   @media screen and (max-width: 1199px) {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-    align-items: baseline;
+    align-items: center;
   }
   @include desktop {
     display: flex;
-    aign-items: baseline;
+    aign-items: center;
   }
 }
-.container-contacts {
+.container-contacts,
+.container-social {
   @include mobile-max {
-    margin: 0 auto 60px;
+    margin: 0;
   }
 }
 .container-contacts,

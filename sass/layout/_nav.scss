@@ -1,19 +1,19 @@
+.navigation,
 .navigation__list {
   @include mobile-max {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    margin-bottom: 302px;
   }
   @include tablet {
-    position: absolute;
     display: flex;
     flex-direction: row;
-    gap: 50px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 87px;
-    margin-right: 96px;
+    justify-content: space-between;
+    margin-right: auto;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: row;
   }
 }
 .link {
@@ -30,10 +30,12 @@
     font-size: 40px;
     line-height: 1.17;
     letter-spacing: 0.02em;
-    color: $CurrentColor;
   }
-  font-size: 14px;
-  line-height: 1.14;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+  color: $CurrentColor;
 }
 .navigation__link {
   @include mobile-max {
@@ -60,7 +62,6 @@
 }
 
 .navigation__item-menu {
-  margin-left: 40px;
   @include mobile-max {
     &:last-child {
       margin-bottom: auto;
@@ -72,20 +73,39 @@
   &:last-child {
     margin-right: 0px;
   }
+  @include desktop {
+    margin-right: 50px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
 }
 
 .main-nav > .logo__header {
   @include mobile {
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-left: 15px;
+    justify-content: center;
   }
   @include tablet {
-    margin: 26px 87px 0px 15px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    padding-left: 15px;
+    margin-right: 93px;
   }
+
   @include desktop {
     margin-right: 93px;
     padding-top: 24px;
     padding-bottom: 25px;
+    font-family: $LogoFamily;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-align: left;
+    text-decoration: none;
   }
   font-family: $LogoFamily;
   font-weight: 700;
@@ -94,6 +114,7 @@
   letter-spacing: 0.03em;
   text-align: left;
   text-decoration: none;
+  align-items: center;
 }
 
 .active {

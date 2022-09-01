@@ -1,23 +1,24 @@
 .contact {
-  margin-bottom: 64px;
+  @include mobile-max {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    gap: 32px;
+    margin: 64px 0;
+  }
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-content: center;
+  }
   @include desktop {
     margin-left: auto;
   }
 }
 .contact__list {
-  @include mobile-max {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  @include tablet {
-    margin-left: auto;
-  }
-  @include desktop {
-    flex-wrap: wrap;
-    gap: 50px;
-  }
   color: $SecondaryColor;
-  align-items: center;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -25,6 +26,12 @@
   transition: color $TransitionTimingFunction;
   .contact &:last-child {
     margin-right: 0px;
+  }
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: flex-end;
   }
 }
 .contact__tel-link {
@@ -37,23 +44,27 @@
     color: $CurrentColor;
   }
 }
+.contact__mail-link {
+  @include mobile-max {
+    color: $SecondaryColor;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    transition: color $TransitionTimingFunction;
+  }
+}
 .contact__mail-link,
 .contact__tel-link {
-  @include mobile-max {
-    display: flex;
-    flex-direction: column-reverse;
-    // justify-content: space-between;
-  }
   @include tablet {
     display: inline-block;
     fill: currentColor;
-    margin-right: 10px;
   }
-  @include desktop {
-    display: flex;
-    align-items: center;
-    padding: 22px 6px;
-  }
+}
+@include desktop {
+  display: flex;
+  align-items: center;
+  padding: 22px 6px;
   color: $SecondaryColor;
   font-weight: 500;
   font-size: 14px;
@@ -70,12 +81,16 @@
   @include mobile-max {
     display: flex;
     flex-direction: column-reverse;
+    align-items: flex-start;
+    display: none;
   }
   @include tablet {
     display: inline-block;
-    fill: currentColor;
     margin-right: 10px;
+    margin-left: 77px;
   }
+  fill: currentColor;
+  margin-right: 10px;
   background-position: center;
   background-size: contain;
   &:hover,
@@ -83,4 +98,3 @@
     color: $CurrentColor;
   }
 }
-//

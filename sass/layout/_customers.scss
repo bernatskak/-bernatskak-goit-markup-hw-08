@@ -18,8 +18,9 @@
   margin-bottom: 60px;
 }
 .customers-item {
-  width: calc((100% - 30px) / 2);
-
+  @include mobile {
+    width: calc((100% - 30px) / 2);
+  }
   @include tablet {
     width: calc((100% - 6 * 30px) / 3);
   }
@@ -45,4 +46,6 @@
 }
 .clients-icon {
   fill: currentColor;
+  align-items: center;
+  justify-content: center;
 }

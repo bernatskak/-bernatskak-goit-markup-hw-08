@@ -48,10 +48,10 @@
 }
 .container-social {
   @media screen and (max-width: 767px) {
+    margin-bottom: 0;
     width: 100%;
-    margin-bottom: 60px;
   }
-  //
+
   @include tablet {
     width: 50%;
   }
@@ -62,29 +62,39 @@
 }
 
 .social-text {
-  margin-top: 0px;
-  margin-bottom: 0px;
-
+  @include mobile-max {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
   width: 206px;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
   color: $mainLightColor;
-  @include mobile-max {
-    text-align: center;
+  @include tablet {
+    text-align: start;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
   }
   @include desktop {
     text-align: start;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 }
 .social-list {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
+  // margin-top: 20px;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 .soc-item {
   width: 44px;

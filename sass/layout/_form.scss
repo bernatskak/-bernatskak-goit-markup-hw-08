@@ -1,5 +1,5 @@
 .modal-form {
-  width: 448px;
+  max-width: 448px;
   height: 342px;
   margin-bottom: 10px;
 }
@@ -85,6 +85,12 @@
 /*Checkbox*/
 
 .check-text {
+  @media screen and (max-width: 1199px) {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+  }
   position: relative;
   display: flex;
   align-items: center;
