@@ -1,13 +1,12 @@
 .header {
-  position: fixed;
+  position: relative;
   top: 0;
-  z-index: 1;
   width: 100%;
   border-bottom: 1px solid $BorderHeader;
   background-color: $mainLightColor;
   .main-nav {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     @include mobile-max {
       justify-content: space-between;
     }
@@ -18,7 +17,6 @@
 }
 .menu-container {
   @include tablet {
-    display: flex;
     flex-wrap: nowrap;
     align-items: center;
     flex-basis: 70%;

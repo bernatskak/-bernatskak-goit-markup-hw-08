@@ -8,7 +8,7 @@
   }
   @include tablet {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: wrap;
     gap: 12px;
     align-content: center;
   }
@@ -27,6 +27,7 @@
   .contact &:last-child {
     margin-right: 0px;
   }
+
   @include desktop {
     display: flex;
     flex-wrap: wrap;
@@ -60,23 +61,22 @@
     display: inline-block;
     fill: currentColor;
   }
-}
-@include desktop {
-  display: flex;
-  align-items: center;
-  padding: 22px 6px;
-  color: $SecondaryColor;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  transition: color $TransitionTimingFunction;
-  &:hover,
-  &:focus {
-    color: $CurrentColor;
+  @include desktop {
+    display: flex;
+    align-items: center;
+    padding: 22px 6px;
+    color: $SecondaryColor;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color $TransitionTimingFunction;
+    &:hover,
+    &:focus {
+      color: $CurrentColor;
+    }
   }
 }
-
 .contact__icon {
   @include mobile-max {
     display: flex;
