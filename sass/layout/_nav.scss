@@ -8,8 +8,8 @@
   @include tablet {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-right: auto;
+    min-width: 283px;
+    margin-right: 0;
   }
   @include desktop {
     display: flex;
@@ -30,6 +30,9 @@
     font-size: 40px;
     line-height: 1.17;
     letter-spacing: 0.02em;
+  }
+  @include tablet {
+    align-items: center;
   }
   @include desktop {
     font-size: 14px;

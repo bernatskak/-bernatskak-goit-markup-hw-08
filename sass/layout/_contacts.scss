@@ -8,13 +8,14 @@
   }
   @include tablet {
     display: flex;
-    flex-direction: wrap;
+    flex-direction: column;
     gap: 12px;
-    align-content: center;
+    align-items: flex-end;
   }
   @include desktop {
+    flex-direction: column;
     margin-left: auto;
-    align-items: center;
+    align-items: flex-end;
   }
 }
 .contact__list {
@@ -28,9 +29,10 @@
   .contact &:last-child {
     margin-right: 0px;
   }
+  @include tablet {
+  }
   @include desktop {
     display: flex;
-    flex-wrap: wrap;
     gap: 50px;
     justify-content: flex-end;
   }
@@ -44,6 +46,9 @@
     margin-top: auto;
     color: $CurrentColor;
   }
+  @include tablet {
+    margin-right: 30px;
+  }
 }
 .contact__mail-link {
   @include mobile-max {
@@ -53,6 +58,9 @@
     line-height: 1.16;
     letter-spacing: 0.02em;
     transition: color $TransitionTimingFunction;
+  }
+  @include tablet {
+    margin-right: 15px;
   }
 }
 .contact__mail-link,
@@ -87,7 +95,7 @@
   @include tablet {
     display: inline-block;
     margin-right: 10px;
-    margin-left: 77px;
+    margin-left: 0;
   }
   fill: currentColor;
   margin-right: 10px;
