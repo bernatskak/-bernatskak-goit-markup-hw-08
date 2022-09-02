@@ -6,14 +6,16 @@
     gap: 32px;
     margin: 64px 0;
   }
+
   @include tablet {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    align-items: flex-end;
+    gap: 10px;
+    margin-left: auto;
   }
   @include desktop {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     margin-left: auto;
     align-items: flex-end;
   }
@@ -29,12 +31,12 @@
   .contact &:last-child {
     margin-right: 0px;
   }
-  @include tablet {
-  }
+
   @include desktop {
     display: flex;
-    gap: 50px;
-    justify-content: flex-end;
+    // flex-direction: row;
+    // gap: 50px;
+    // justify-content: flex-end;
   }
 }
 .contact__tel-link {
