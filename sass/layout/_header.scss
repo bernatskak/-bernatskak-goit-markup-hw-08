@@ -5,6 +5,9 @@
   display: flex;
   border-bottom: 1px solid $BorderHeader;
   background-color: $mainLightColor;
+  // @include mobile-max {
+  //   padding: 10px 0;
+  // }
   .main-nav {
     display: flex;
     align-items: center;
@@ -29,11 +32,11 @@
 }
 .menu-btn {
   display: block;
-  padding: 10px 15px 10px auto;
   margin-left: auto;
   border: none;
   background-color: transparent;
   color: $MainColor;
+  z-index: 2;
   cursor: pointer;
   transition: color $TransitionTimingFunction;
 

@@ -32,22 +32,31 @@
   .contact &:last-child {
     margin-right: 0px;
   }
-
+  @include tablet {
+    margin-left: auto;
+  }
   @include desktop {
     display: flex;
   }
 }
 .contact__tel-link {
-  @include mobile-max {
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
-    margin-top: auto;
-    color: $CurrentColor;
+  @media screen and (max-width: 336px) {
+    font-size: 24px;
   }
+  @media screen and (min-width: 337px) {
+    font-size: 34px;
+  }
+  font-weight: 500;
+
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  margin-top: auto;
+  color: $CurrentColor;
+
   @include tablet {
     margin-right: 30px;
+    font-size: 14px;
+    color: $SecondaryColor;
   }
 }
 .contact__mail-link {
@@ -61,6 +70,7 @@
   }
   @include tablet {
     margin-right: 15px;
+    margin-left: auto;
   }
 }
 .contact__mail-link,
@@ -68,7 +78,6 @@
   @include tablet {
     display: inline-block;
     fill: currentColor;
-    color: $SecondaryColor;
   }
   @include desktop {
     display: flex;

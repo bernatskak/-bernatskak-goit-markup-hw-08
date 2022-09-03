@@ -21,6 +21,34 @@
   @media screen and (max-width: 330px) {
     padding: 40px 10px;
   }
+
+  @media screen and (min-width: 331px) and (max-width: 470px) {
+    padding: 40px 20px;
+  }
+
+  @include mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 450px;
+    height: 609px;
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 528px;
+    height: 581px;
+  }
+
+  @media screen and (max-width: 330px) {
+    padding: 40px 10px;
+  }
   @media screen and (min-width: 331px) and (max-width: 470px) {
     padding: 40px 20px;
     height: 609px;
