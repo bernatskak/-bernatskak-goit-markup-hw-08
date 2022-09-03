@@ -1272,7 +1272,7 @@ input {
     padding: 40px 10px;
   }
 }
-@media screen and (min-width: 331px) and (max-width: 470px) {
+@media screen and (min-width: 320px) and (max-width: 470px) {
   .modal {
     padding: 40px 20px;
     height: 609px;
