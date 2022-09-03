@@ -505,7 +505,8 @@ input {
 }
 @media screen and (min-width: 1200px) {
   .customers-item {
-    width: 170px;
+    -ms-flex-preferred-size: calc((100% - 150px) / 6);
+        flex-basis: calc((100% - 150px) / 6);
   }
 }
 
@@ -1278,7 +1279,7 @@ input {
     height: 609px;
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .modal {
     position: absolute;
     top: 50%;
@@ -1291,7 +1292,7 @@ input {
     padding: 40px;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+@media screen and (max-width: 767px) and (max-width: 1199px) {
   .modal {
     min-height: 609px;
   }
