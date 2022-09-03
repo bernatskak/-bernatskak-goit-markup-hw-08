@@ -7,9 +7,6 @@
   }
   @include tablet {
     display: flex;
-    flex-direction: row;
-    min-width: 283px;
-    margin-right: 0;
   }
   @include desktop {
     display: flex;

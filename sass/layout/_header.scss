@@ -11,6 +11,11 @@
     @include mobile-max {
       justify-content: space-between;
     }
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 }
 .menu {

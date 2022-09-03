@@ -24,9 +24,7 @@
     @include mobile-max {
       text-align: center;
     }
-    @include desktop {
-      text-align: start;
-    }
+    text-align: start;
   }
   .feature__list-astronaut,
   .feature__list-diagram,

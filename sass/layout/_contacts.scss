@@ -12,6 +12,7 @@
     flex-direction: column;
     gap: 10px;
     margin-left: auto;
+    margin-right: 0px;
   }
   @include desktop {
     display: flex;
@@ -34,9 +35,6 @@
 
   @include desktop {
     display: flex;
-    // flex-direction: row;
-    // gap: 50px;
-    // justify-content: flex-end;
   }
 }
 .contact__tel-link {
@@ -70,6 +68,7 @@
   @include tablet {
     display: inline-block;
     fill: currentColor;
+    color: $SecondaryColor;
   }
   @include desktop {
     display: flex;
@@ -94,11 +93,7 @@
     align-items: flex-start;
     display: none;
   }
-  @include tablet {
-    display: inline-block;
-    margin-right: 10px;
-    margin-left: 0;
-  }
+
   fill: currentColor;
   margin-right: 10px;
   background-position: center;
