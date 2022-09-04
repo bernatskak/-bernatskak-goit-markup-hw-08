@@ -216,14 +216,12 @@ input {
 }
 @media screen and (min-width: 1200px) {
   .container-social {
-    width: 206px;
-    margin-left: 70px;
-    margin-right: 93px;
+    width: auto;
+    margin-right: auto;
   }
 }
 
 .social-text {
-  width: 206px;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -240,7 +238,7 @@ input {
 }
 @media screen and (min-width: 768px) {
   .social-text {
-    text-align: center;
+    text-align: start;
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
@@ -250,8 +248,9 @@ input {
 @media screen and (min-width: 1200px) {
   .social-text {
     text-align: start;
-    margin-top: 0px;
-    margin-bottom: 20px;
+    margin-left: 0;
+    padding-top: 12px;
+    margin-bottom: -10px;
   }
 }
 
@@ -260,23 +259,20 @@ input {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
+  margin-right: auto;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.soc-item {
-  width: 44px;
-  height: 44px;
 }
 
 .soc-link {
   width: 44px;
   height: 44px;
+  padding: 0;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1549,14 +1545,13 @@ input {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: white;
+  padding-top: 12px;
   margin-top: 0;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 1200px) {
   .online-title {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    text-align: start;
   }
 }
 
