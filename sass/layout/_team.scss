@@ -3,10 +3,10 @@
   padding-bottom: 60px;
   background-color: $BadgeBgColor;
 
-  // @media screen and (min-width: 1200px) {
-  //   padding-top: 94px;
-  //   padding-bottom: 94px;
-  // }
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .title {
   margin-top: 0px;
@@ -20,6 +20,9 @@
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  @include desktop {
+    font-size: 36px;
+  }
 }
 .title--color-dark {
   color: $MainColor;

@@ -4,7 +4,8 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
-    margin-bottom: 302px;
+    margin-bottom: 205px;
+    height: 100%;
   }
   @include tablet {
     display: flex;
