@@ -28,8 +28,8 @@
     align-items: center;
   }
 }
-.menu-btn:hover,
-.menu-btn:focus {
+.icon-close:hover,
+.icon-menu:focus {
   @include mobile-max {
     color: $CurrentColor;
   }
