@@ -1030,13 +1030,6 @@ input {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .icon-close:hover,
-.icon-menu:focus {
-    color: #2196f3;
-  }
-}
-
 .menu-btn {
   display: block;
   margin-left: auto;
@@ -1047,6 +1040,9 @@ input {
   cursor: pointer;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-btn:hover, .menu-btn:focus {
+  color: #2196f3;
 }
 @media screen and (min-width: 768px) {
   .menu-btn {
@@ -1388,7 +1384,7 @@ input {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 32px;
-    margin-bottom: 205px;
+    margin-bottom: 150px;
     height: 100%;
   }
 }

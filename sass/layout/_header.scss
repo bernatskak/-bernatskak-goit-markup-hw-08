@@ -28,12 +28,7 @@
     align-items: center;
   }
 }
-.icon-close:hover,
-.icon-menu:focus {
-  @include mobile-max {
-    color: $CurrentColor;
-  }
-}
+
 .menu-btn {
   display: block;
   margin-left: auto;
@@ -43,7 +38,10 @@
   z-index: 2;
   cursor: pointer;
   transition: color $TransitionTimingFunction;
-
+  &:hover,
+  &:focus {
+    color: $CurrentColor;
+  }
   @include tablet {
     display: none;
   }
