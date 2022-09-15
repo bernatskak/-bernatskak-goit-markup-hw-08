@@ -4,6 +4,7 @@
   width: 100%;
   height: 100%;
   padding: 40px;
+  z-index: 90;
   background: rgba(0, 0, 0, 0.2);
   transition: opacity $TransitionTimingFunction, visibility $TransitionTimingFunction;
   @media screen and (max-width: 480px) {

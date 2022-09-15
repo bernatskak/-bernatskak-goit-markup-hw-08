@@ -38,15 +38,14 @@
   z-index: 2;
   cursor: pointer;
   transition: color $TransitionTimingFunction;
-  &:hover,
-  &:focus {
-    color: $CurrentColor;
-  }
   @include tablet {
     display: none;
   }
 }
-
+.menu-btn:hover,
+.menu-btn:focus {
+  color: $CurrentColor;
+}
 .contact__icon .icone-close,
 .icon-menu {
   padding: 10px;
