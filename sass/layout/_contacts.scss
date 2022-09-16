@@ -29,14 +29,16 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   transition: color $TransitionTimingFunction;
-  .contact &:last-child {
-    margin-right: 0px;
-  }
+
   @include tablet {
     margin-left: auto;
   }
   @include desktop {
     display: flex;
+    margin-right: 30px;
+    .contact &:last-child {
+      margin-right: 0px;
+    }
   }
 }
 .contact__tel-link {
@@ -83,7 +85,7 @@
   @include desktop {
     display: flex;
     align-items: center;
-    padding: 22px 6px;
+    margin-right: 0px;
     color: $SecondaryColor;
     font-weight: 500;
     font-size: 14px;
