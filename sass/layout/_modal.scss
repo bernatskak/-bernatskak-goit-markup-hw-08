@@ -8,7 +8,7 @@
   background: rgba(0, 0, 0, 0.2);
   transition: opacity $TransitionTimingFunction, visibility $TransitionTimingFunction;
   @media screen and (max-width: 480px) {
-    padding: 94px, 15px;
+    // padding: 94px, 15px;
     overflow-y: auto;
   }
 }
@@ -41,21 +41,13 @@
   @media screen and (max-width: 330px) {
     padding: 40px 10px;
   }
-  @media screen and (min-width: 320px) and (max-width: 470px) {
+  @media screen and (min-width: 320px) and (max-width: 480px) {
     padding: 40px 20px;
     height: 609px;
+    width: 98%;
   }
-  @include mobile-max {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+  @media screen and (min-width: 481px) {
     width: 450px;
-    height: 609px;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 30px);
-    @media screen and (max-width: 1199px) {
-      min-height: 609px;
-    }
     padding: 40px;
   }
   @include tablet {
@@ -102,8 +94,8 @@
 }
 
 .modal-title {
-  margin-top: 0px;
-  margin-bottom: 12px;
+  margin: 0px;
+
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;

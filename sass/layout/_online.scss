@@ -19,7 +19,7 @@
   text-transform: uppercase;
 
   color: $mainLightColor;
-  padding-top: 12px;
+
   margin-top: 0;
   margin-bottom: 20px;
 
@@ -97,7 +97,8 @@
   cursor: pointer;
   font-family: inherit;
   transition: background-color $TransitionTimingFunction;
-
+  font-size: 16px;
+  line-height: 1.88;
   &:hover,
   &:focus {
     background-color: $SecondaryCurrentColor;

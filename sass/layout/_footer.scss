@@ -1,6 +1,6 @@
 .footer {
   padding-top: 60px;
-  padding-bottom: 0px;
+  padding-bottom: 60px;
   background-color: $BorderColor;
 }
 .container-footer {
@@ -9,18 +9,16 @@
     flex-direction: column;
     align-items: center;
     gap: 60px;
-    padding-bottom: 60px;
   }
   @media screen and (max-width: 1199px) {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
     align-items: center;
-    padding-bottom: 60px;
   }
   @include desktop {
     display: flex;
-    aign-items: baseline;
+    align-items: baseline;
   }
 }
 .container-contacts,
@@ -34,6 +32,9 @@
   @include tablet {
     flex-basis: 50%;
     margin-bottom: 60px;
+  }
+  @include desktop {
+    margin-bottom: 0px;
   }
 }
 

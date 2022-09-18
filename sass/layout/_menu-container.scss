@@ -16,7 +16,6 @@
       0px 1px 3px rgba(0, 0, 0, 0.16);
     &.is-open {
       display: block;
-      overflow: auto;
       pointer-events: all;
       transform: translateY(0);
     }
@@ -27,6 +26,54 @@
     }
   }
 }
+.menu {
+  flex-grow: 1;
+}
+.menu-container {
+  @include tablet {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
+
+.menu-btn {
+  display: inline-block;
+  padding: 0;
+  margin-left: auto;
+
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  color: $MainColor;
+  z-index: 2;
+  outline: none;
+  cursor: pointer;
+  transition: color $TransitionTimingFunction;
+  @include tablet {
+    display: none;
+  }
+}
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  &:hover,
+  &:focus {
+    color: $CurrentColor;
+  }
+}
+
+.icon-close {
+  display: none;
+}
+
+.menu-btn.is-open .icon-close {
+  display: block;
+  z-index: 99;
+}
+.menu-btn.is-open .icon-menu {
+  display: none;
+}
+
 .menu .menu-container {
   @media screen and (max-width: 429px) {
     padding: 40px 0;
@@ -44,13 +91,10 @@
   @include mobile-max {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-
-    top: 0;
-    left: 0;
     padding: 48px 20px;
-
+    height: 100%;
     width: 100%;
+    justify-content: space-between;
   }
   @include tablet {
     display: flex;
@@ -75,11 +119,11 @@
 }
 
 .mobile-soc {
-  display: flex;
   @include mobile-max {
+    display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-bottom: 48px;
+    margin-top: 64px;
   }
   @include tablet {
     display: none;

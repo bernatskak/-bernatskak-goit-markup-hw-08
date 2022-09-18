@@ -11,6 +11,8 @@
     align-items: center;
     @include mobile-max {
       justify-content: space-between;
+
+      padding: 10px;
     }
     @include tablet {
       display: flex;
@@ -18,48 +20,4 @@
       justify-content: space-between;
     }
   }
-}
-.menu {
-  flex-grow: 1;
-}
-.menu-container {
-  @include tablet {
-    flex-wrap: nowrap;
-    align-items: center;
-  }
-}
-
-.menu-btn {
-  display: block;
-  margin-left: auto;
-  border: none;
-  background-color: transparent;
-  color: $MainColor;
-  z-index: 2;
-  cursor: pointer;
-  transition: color $TransitionTimingFunction;
-  @include tablet {
-    display: none;
-  }
-}
-.menu-btn:hover,
-.menu-btn:focus {
-  color: $CurrentColor;
-}
-.contact__icon .icone-close,
-.icon-menu {
-  padding: 10px;
-}
-
-.icon-close {
-  display: none;
-  margin-left: auto;
-  margin-bottom: 30px;
-}
-
-.menu-btn.is-open .icon-close {
-  display: block;
-}
-.menu-btn.is-open .icon-menu {
-  display: none;
 }

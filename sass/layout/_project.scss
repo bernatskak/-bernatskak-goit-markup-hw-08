@@ -11,7 +11,7 @@
 }
 .project-list {
   max-width: 450px;
-  // margin-bottom: 60px;
+
   color: $MainColor;
 
   font-size: 18px;
@@ -43,9 +43,10 @@
   overflow: auto;
   color: $mainLightColor;
   background-color: rgba(33, 150, 243, 0.9);
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms linear;
-  .project-list:hover & {
+  .project-list:hover &,
+  .project-list:focus & {
     transform: translateY(0);
   }
 }
