@@ -92,8 +92,7 @@
 .check-text {
   display: inline-block;
   vertical-align: middle;
-  margin-left: auto;
-  margin-right: auto;
+
   margin-bottom: 30px;
   font-weight: 400;
   font-size: 14px;
@@ -139,16 +138,17 @@
 
 .check-link {
   color: $CurrentColor;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button-check {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  // margin-top: 20px;
   padding: 10px 52px;
   border-radius: 4px;
-  min-width: 200px;
+
   text-align: center;
   border: none;
   cursor: pointer;

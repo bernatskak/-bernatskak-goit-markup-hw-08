@@ -20,11 +20,12 @@
 .work__text {
   position: absolute;
   bottom: 0;
-  padding: 27px 15px;
   margin: 0;
   height: 70px;
   width: 370px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
   line-height: 16px;
   text-align: center;

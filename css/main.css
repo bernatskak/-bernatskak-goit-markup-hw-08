@@ -414,7 +414,7 @@ input {
 }
 @media screen and (min-width: 768px) {
   .contact__tel-link {
-    padding-bottom: 21px;
+    padding-bottom: 20px;
     font-size: 14px;
     color: #757575;
   }
@@ -433,7 +433,7 @@ input {
 }
 @media screen and (min-width: 768px) {
   .contact__mail-link {
-    padding-top: 21px;
+    padding-top: 20px;
     margin-left: auto;
     color: #757575;
   }
@@ -927,8 +927,6 @@ input {
 .check-text {
   display: inline-block;
   vertical-align: middle;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 30px;
   font-weight: 400;
   font-size: 14px;
@@ -976,6 +974,8 @@ input {
 
 .check-link {
   color: #2196f3;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button-check {
@@ -984,7 +984,6 @@ input {
   margin-right: auto;
   padding: 10px 52px;
   border-radius: 4px;
-  min-width: 200px;
   text-align: center;
   border: none;
   cursor: pointer;
@@ -1261,18 +1260,16 @@ input {
 .backdrop {
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 100%;
-  padding: 40px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 93px 15px;
   z-index: 90;
+  overflow-y: auto;
+  opacity: 1;
   background: rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-@media screen and (max-width: 480px) {
-  .backdrop {
-    overflow-y: auto;
-  }
 }
 
 .is-hidden {
@@ -1282,6 +1279,11 @@ input {
 }
 
 .modal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   background: white;
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -1290,51 +1292,27 @@ input {
 @media screen and (max-width: 330px) {
   .modal {
     padding: 40px 10px;
-  }
-}
-@media screen and (min-width: 331px) and (max-width: 470px) {
-  .modal {
-    padding: 40px 20px;
-  }
-}
-@media screen and (min-width: 480px) {
-  .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    width: 450px;
     height: 609px;
+    width: 96%;
   }
 }
-@media screen and (max-width: 330px) {
-  .modal {
-    padding: 40px 10px;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 331px) {
   .modal {
     padding: 40px 20px;
     height: 609px;
-    width: 98%;
-  }
-}
-@media screen and (min-width: 481px) {
-  .modal {
-    width: 450px;
-    padding: 40px;
+    width: 96%;
   }
 }
 @media screen and (min-width: 768px) {
   .modal {
     width: 450px;
+    height: 609px;
     padding: 40px;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     width: 528px;
@@ -1787,7 +1765,7 @@ input {
   transition: transform 250ms linear;
   transition: transform 250ms linear, -webkit-transform 250ms linear;
 }
-.project-list:hover .top-text, .project-list:focus .top-text {
+.project-img:hover .top-text, .project-img:focus .top-text {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -2127,10 +2105,18 @@ input {
 .work__text {
   position: absolute;
   bottom: 0;
-  padding: 27px 15px;
   margin: 0;
   height: 70px;
   width: 370px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 14px;
   line-height: 16px;
   text-align: center;

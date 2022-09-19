@@ -56,7 +56,7 @@
   color: $CurrentColor;
 
   @include tablet {
-    padding-bottom: 21px;
+    padding-bottom: 20px;
     font-size: 14px;
     color: $SecondaryColor;
   }
@@ -71,7 +71,7 @@
     transition: color $TransitionTimingFunction;
   }
   @include tablet {
-    padding-top: 21px;
+    padding-top: 20px;
     margin-left: auto;
     color: $SecondaryColor;
   }
